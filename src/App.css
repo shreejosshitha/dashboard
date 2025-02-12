@@ -73,159 +73,142 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
 }
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #eef2f7;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Dashboard Container */
+/* 🌟 General Dashboard Styling */
 .dashboard-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  min-height: 650px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #e0f7fa, #d0e1fd);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Header */
+.dashboard-container:hover {
+  transform: scale(1.02);
+}
+
+/* 🌟 Dashboard Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-}
-
-.dashboard-header h2 {
-  color: #2c3e50;
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* Logout Button */
-.logout-btn {
-  background-color: #e74c3c;
+  padding: 18px;
+  background: linear-gradient(135deg, #0077b6, #0096c7);
   color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background 0.3s ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.logout-btn:hover {
-  background-color: #c0392b;
-}
-
-/* Input Section */
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.input-container input {
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #bdc3c7;
-  border-radius: 6px;
-  width: 250px;
-  transition: border 0.3s ease-in-out;
-  font-family: 'Poppins', sans-serif;
-  text-align: left; /* Change from center to left */
-  padding-left: 10px; /* Adds padding to keep text away from the border */
-}
-
-.input-container input:focus {
-  border-color: #3498db;
-  outline: none;
-}
-
-
-/* Add Subject Button */
-.input-container button {
-  background-color: #3498db;
+/* 🚀 Logout Button */
+.logout-btn {
+  background: linear-gradient(135deg, #ff4d4d, #d63031);
   color: white;
   border: none;
   padding: 12px 18px;
-  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.input-container button:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff1a1a, #b71c1c);
+  transform: scale(1.05);
 }
 
-.input-container button:hover:not(:disabled) {
-  background-color: #2980b9;
-}
-
-/* Table Styling */
+/* 🎨 Table Styling */
 .marks-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 25px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.marks-table th, .marks-table td {
+.marks-table th,
+.marks-table td {
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 16px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
 }
 
 .marks-table th {
-  background-color: #3498db;
+  background: linear-gradient(135deg, #005792, #0077b6);
   color: white;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.marks-table tr:nth-child(even) {
-  background-color: #f8f9fa;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .marks-table td {
-  font-size: 15px;
-  font-weight: 500;
-  color: #34495e;
+  background: #f0f9ff;
 }
 
-/* Responsive Design */
+/* 🎯 Input Fields */
+.marks-table input {
+  width: 70px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marks-table input:focus {
+  border-color: #ff7b00;
+  box-shadow: 0px 4px 10px rgba(255, 123, 0, 0.4);
+}
+
+/* ➕ Add Row Button */
+.add-row-btn {
+  margin-top: 25px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #00c897, #008060);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-row-btn:hover {
+  background: linear-gradient(135deg, #008060, #00573d);
+  transform: scale(1.07);
+}
+
+.add-row-btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 🌍 Responsive Design */
 @media (max-width: 768px) {
   .dashboard-container {
-    width: 90%;
-    padding: 20px;
+    max-width: 95%;
+    padding: 25px;
   }
 
-  .input-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .marks-table th,
+  .marks-table td {
+    font-size: 15px;
+    padding: 12px;
   }
 
-  .input-container input {
-    width: 100%;
+  .marks-table input {
+    width: 50px;
+    font-size: 14px;
   }
 }
-
